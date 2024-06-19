@@ -1,0 +1,128 @@
+﻿@model List<favoriteBook>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="shortcut icon " href="./favicon.svg" type="image/svg+xml">
+
+</head>
+
+<body>
+    <!--header start  -->
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#" class="logo">BOOK SHOP</a>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="~/User/userBookList" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="~/User/userBookList/#benefits" class="navbar-link" data-nav-link>Benefits</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="~/User/userBookList/#chapters" class="navbar-link" data-nav-link>Books</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="~/User/FavList" class="navbar-link">Favorite</a>
+                    </li>
+                    <!--<li class="navbar-item">
+                        <a class="nav-link" asp-area="" asp-controller="User" asp-action="FavList">Favorite </a>
+                    </li>-->
+                  
+                    <li class="navbar-item">
+                        <a href="~/User/UserChangePassword" class="navbar-link">ChangePassword</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="~/Home/logout" class="navbar-link">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+
+    </header>
+
+
+    <main>
+
+        <article>
+            <section class="section hero" id="home" aria-label="home">
+                <div class="container">
+                    <div class="hero-content">
+                        <p class="section-subtitle">Let's Make The Best Investment</p>
+                        
+                    </div>
+                    
+                </div>
+            </section>
+
+
+            <p class="section-subtitle">Favorite List</p>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Book Id</th>
+                        <th>Book Name</th>
+                        <th>Writer</th>
+                        <th>Price</th>
+                        <th>delete Fav</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>@book.Book_Id</td>
+                            <td>@book.Book_Name</td>
+                            <td>@book.Writer</td>
+                            <td>@book.price</td>
+                            <td>
+                                <a asp-action="DeleteFav" asp-controller="User" asp-route-id="@book.Book_Id">
+                                    <img src="https://th.bing.com/th/id/OIP.u5sPQj0q19zEcmq7w6nP5QHaHa?w=187&h=187&c=7&r=0&o=5&pid=1.7"
+                                         style="height:22px; width:22px;" />
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <br />
+           
+            <br />
+            <hr />
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-top">
+
+                <a href="~/User/userBookList" class="logo">BOOK SHOP</a>
+            </div>  
+
+
+        </div>
+    </footer>
+
+    <script src="assets\js\script.js"></script>
+</body>
+</html>

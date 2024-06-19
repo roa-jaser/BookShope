@@ -1,0 +1,280 @@
+﻿@model List<Book>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="shortcut icon " href="./favicon.svg" type="image/svg+xml">
+
+</head>
+
+<body>
+    <!--header start  -->
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#" class="logo">BOOK SHOP</a>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#benefits" class="navbar-link" data-nav-link>Benefits</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#chapters" class="navbar-link" data-nav-link>Books</a>
+                    </li>
+                   
+                    <!--<li class="navbar-item">
+                        <a class="nav-link" asp-area="" asp-controller="User" asp-action="FavList">Favorite </a>
+                    </li>-->
+                    <li class="navbar-item">
+                        <a href="~/Admin/AdminChangepassword" class="navbar-link">ChangePassword</a>
+                    </li>
+                    <!--<a asp-area="" asp-controller="Home" asp-action="Login">login</a>-->
+                    </li>
+                    <li class="navbar-item">
+                        <a href="~/Home/logout" class="navbar-link">Logout</a>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="logout"> Logout </a>
+                    </li>-->
+
+                </ul>
+            </nav>
+
+        </div>
+
+
+    </header>
+
+
+    <main>
+
+        <article>
+            <section class="section hero" id="home" aria-label="home">
+                <div class="container">
+                    <div class="hero-content">
+                        <p class="section-subtitle">Let's Make The Best Investment</p>
+                        <form method="get" asp-controller="Admin" asp-action="AdminSearch">
+                            
+                            <div class="box">
+                                <input type="text" name="searchkey" placeholder="Enter Book Name" />
+                                <button type="submit">Search</button>
+                            </div>
+                        </form>
+                        <br />
+                    </div>
+                    <div class="hero-banner has-before">
+                        <img src="~/images/hero-banner.png" width="431" height="596" alt="" class="w-100">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section benefits" id="benefits" aria-label="benefits">
+                <div class="container">
+                    <div class="grid-list">
+                        <li class="benefits-content">
+                            <h2 class="h2 section-title">What you'll achieve by this book</h2>
+                            <p class="section-text">Lorem ipsum dolor sit amet, consectetuer laoreet dolore magna.</p>
+                        </li>
+                        <li>
+                            <div class="benefits-card has-before has-after">
+                                <div class="card-icon">
+                                    <img src="~/images/benefits-1.svg" width="40" height="40" loading="lazy" alt="Experience">
+                                </div>
+                                <h3 class="h3 card-title">Experience</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis aspernatur corporis.</p>
+                                <a href="#" class="btn-link">
+                                    <span class="span">Read more</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefits-card has-before has-after">
+
+                                <div class="card-icon">
+                                    <img src="~/images/benefits-2.svg" width="40" height="40" loading="lazy" alt="Motivation">
+                                </div>
+
+                                <h3 class="h3 card-title">Motivation</h3>
+
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis
+                                    aspernatur corporis.
+                                </p>
+
+                                <a href="#" class="btn-link">
+                                    <span class="span">Read more</span>
+
+                                </a>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefits-card has-before has-after">
+
+                                <div class="card-icon">
+                                    <img src="~/images/benefits-3.svg" width="40" height="40" loading="lazy" alt="Goals">
+                                </div>
+
+                                <h3 class="h3 card-title">Goals</h3>
+
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis
+                                    aspernatur corporis.
+                                </p>
+
+                                <a href="#" class="btn-link">
+                                    <span class="span">Read more</span>
+
+                                </a>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefits-card has-before has-after">
+
+                                <div class="card-icon">
+                                    <img src="~/images/benefits-4.svg" width="40" height="40" loading="lazy" alt="Vision">
+                                </div>
+
+                                <h3 class="h3 card-title">Vision</h3>
+
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis
+                                    aspernatur corporis.
+                                </p>
+
+                                <a href="#" class="btn-link">
+                                    <span class="span">Read more</span>
+
+                                </a>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefits-card has-before has-after">
+
+                                <div class="card-icon">
+                                    <img src="~/images/benefits-5.svg" width="40" height="40" loading="lazy" alt="Mission">
+                                </div>
+
+                                <h3 class="h3 card-title">Mission</h3>
+
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis
+                                    aspernatur corporis.
+                                </p>
+
+                                <a href="#" class="btn-link">
+                                    <span class="span">Read more</span>
+
+                                </a>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefits-card has-before has-after">
+
+                                <div class="card-icon">
+                                    <img src="~/images/benefits-6.svg" width="40" height="40" loading="lazy" alt="Strategy">
+                                </div>
+
+                                <h3 class="h3 card-title">Strategy</h3>
+
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis
+                                    aspernatur corporis.
+                                </p>
+
+                                <a href="#" class="btn-link">
+                                    <span class="span">Read more</span>
+
+                                </a>
+
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </section>
+
+
+            <table class="table table-bordered table-striped" id="chapters">
+                <thead>
+                    <tr>
+                        <th>Book Id</th>
+                        <th>Book Name</th>
+                        <th>Writer</th>
+                        <th>Price</th>
+                        <th> Edit </th>
+                        <th> Delete </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>@book.Book_Id</td>
+                            <td>@book.Book_Name</td>
+                            <td>@book.Writer</td>
+                            <td>@book.price</td>
+                            <td>
+                                <a asp-action="EditBook" asp-controller="Admin" asp-route-id="@book.Book_Id">
+                                    <img src="https://w7.pngwing.com/pngs/1018/119/png-transparent-computer-icons-editing-pencil-miscellaneous-angle-pencil.png"
+                                         style="height:22px; width:22px;" />
+                                </a>
+                            </td>
+                            <td>
+                                <a asp-action="DeleteBook" asp-controller="Admin" asp-route-id="@book.Book_Id">
+                                    <img src="https://th.bing.com/th/id/OIP.u5sPQj0q19zEcmq7w6nP5QHaHa?w=187&h=187&c=7&r=0&o=5&pid=1.7"
+                                         style="height:25px; width:25px;" />
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+
+            
+            <a asp-action="Add" asp-controller="Admin" > Add a book </a>
+            <br />
+            <hr />
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-top">
+
+                <a href="#" class="logo">BOOK SHOP</a>
+            </div>  
+
+
+        </div>
+    </footer>
+
+    <script src="assets\js\script.js"></script>
+</body>
+</html>
