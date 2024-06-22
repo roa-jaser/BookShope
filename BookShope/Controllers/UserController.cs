@@ -1,5 +1,4 @@
-﻿using BookApp.Models;
-using BookShope.Models;
+ using BookShope.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
