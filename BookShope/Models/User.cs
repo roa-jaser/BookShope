@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
 
-namespace BookShope.Models
+namespace BookShope.Models;
 {
     public class User
     {
