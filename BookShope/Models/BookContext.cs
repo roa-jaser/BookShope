@@ -1,8 +1,8 @@
-﻿
+ 
 using BookShope.Models;
 using Microsoft.EntityFrameworkCore; //use this package because DbContext is installed with it
 
-namespace BookApp.Models
+namespace BookShope.Models
 {
     public class BookContext : DbContext
     {
