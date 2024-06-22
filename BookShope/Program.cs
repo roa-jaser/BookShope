@@ -12,7 +12,13 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<BookContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("BookContextStr")));
+builder.Services.AddSession(options =>
+{
 
+    options.IdleTimeout = TimeSpan.FromSeconds(60 * 5);
+    options.Cookie.HttpOnly = false;     // default is true
+    options.Cookie.IsEssential = true;   // default is false
+});
 
 var app = builder.Build();
 
