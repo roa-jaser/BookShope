@@ -1,5 +1,4 @@
-﻿using BookApp.Models;
-using BookShope.Models;
+ using BookShope.Models; 
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookShope.Controllers
@@ -19,7 +18,7 @@ namespace BookShope.Controllers
             var books = context.Books.OrderBy(b => b.Book_Name).ToList();
             return View(books);
         }
-
+        [HttpGet]
         public IActionResult Add()
         {
             if (HttpContext.Session.GetInt32("Aid") == null)
